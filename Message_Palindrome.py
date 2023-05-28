@@ -13,7 +13,7 @@ while True:
     for char in punctuations:
         message = message.replace(char, '')
     if message == message[::-1]:
-        print(f"Your message '{message}' is pallindrome")
+        print(f"Your message '{message}' is palindrome")
         break
     else:
         print("Ups!")
