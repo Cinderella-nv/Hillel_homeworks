@@ -1,5 +1,5 @@
 '''Написати програму що видаляє те що написано в дужках (), залишивши весь інший текст. 
-Наприклад з "Я не знав куди йти (втім (недивно)), тому пішов... " 
+Наприклад з "Я не знав куди йти (втім (недивно), тому пішов... " 
 вийде "Я не знав куди йти, тому пішов...". 
 Теж саме для текстів з декількома дужками! 
 Тобто програма-скорочувач для тих кто читає тільки головний контент, а не те що уточнюють в дужках :) 
@@ -11,8 +11,8 @@
 
 longread = input('Tell me your story \n> ')
 
-while '(' in longread:
+for bracket in longread:
 	open_bracket = longread.find(' (')
-	close_bracket = longread.rfind(')', open_bracket + 1)
+	close_bracket = longread.find(')', open_bracket + 1)
 	longread = longread.replace(longread[open_bracket:close_bracket + 1], '')
-	print(f'In short, {longread}')
+print(f'In short, {longread}')
