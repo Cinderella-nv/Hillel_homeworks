@@ -16,13 +16,17 @@
 
 '''Функция возвращает текущие показания за месяц'''
 def get_user_resourse_count() -> float:
-        previous_indicator = float(input('previous_indicator:\t'))
-        current_indicator = float(input('current_indicator:\t'))
-        difference = current_indicator - previous_indicator
-        if previous_indicator < current_indicator:
-            return difference
-        else:
-            print("Wrong previous or current indicator")
+        try:
+            previous_indicator = float(input('previous_indicator:\t'))
+            current_indicator = float(input('current_indicator:\t'))
+            difference = current_indicator - previous_indicator
+            if previous_indicator < current_indicator:
+                return difference
+            else:
+                print("Wrong previous or current indicator")
+                return get_user_resourse_count()
+        except ValueError:
+            print("Your entering indicator is not number")
             return get_user_resourse_count()
 
 '''Функция возвращает сумму платежа за использованный ресурс по текущему тарифу
