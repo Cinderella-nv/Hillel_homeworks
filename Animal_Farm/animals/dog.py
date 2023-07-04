@@ -31,12 +31,3 @@ class Dog(Animal):
             return 'Хорошее настроение'
         print(f'Вы гуляете с {self} {hours} часов.')
         return ''
-
-    # def visit_a_doctor(self):
-    #     """
-    #     Метод реализует проверку здорова ли собака и нужно ли ей к ветеринару
-    #     """
-    #     if self.health:
-    #         print(f'{self.animal_type} {self.name} только что от ветеринара и прекрасно себя чувствует!')
-    #     else:
-    #         print(f'{self.animal_type} {self.name} нуждается в визите к ветеринару!')
