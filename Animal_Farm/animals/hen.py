@@ -34,12 +34,3 @@ class Hen(Animal):
             return 'Куриных яиц: 10 шт.'
         print(f'Вы ухаживаете за {self} {hours} часов и получаете немного куриных яиц')
         return f'Куриных яиц: {randint(1, 5)}'
-
-    # def visit_a_doctor(self):
-    #     """
-    #     Метод реализует проверку здорова ли курица и нужно ли ей к ветеринару
-    #     """
-    #     if self.health:
-    #         print(f'{self.animal_type} {self.name} только что от ветеринара и прекрасно себя чувствует!')
-    #     else:
-    #         print(f'{self.animal_type} {self.name} нуждается в визите к ветеринару!')
